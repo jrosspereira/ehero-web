@@ -1,0 +1,36 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
+               [opened]="!isScreenSmall()"
+               [mode]="isScreenSmall() ? 'over' : 'side'">
+    <mat-toolbar color="primary">
+      <button mat-button>
+        <mat-icon class="sidenav-toggle" (click)="sidenav.toggle()">toggle_on</mat-icon>
+      </button>
+      Collapse
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon color="primary">home</mat-icon> 
+        Home
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon color="primary">calendar_today</mat-icon> 
+        Calendar
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon color="primary">folder_shared</mat-icon> 
+        Forms
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+    <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</mat-sidenav-container>

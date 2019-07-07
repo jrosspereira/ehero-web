@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './home.html',
+  template: '<app-sidenav></app-sidenav>',
   styles: []
 })
 export class AppComponent {

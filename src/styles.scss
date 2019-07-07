@@ -1,5 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+//Colours
+$color-gray: #303030;
+$color-white: #ffff;
+
+$background-color: $color-gray;
+$font-color: $color-white;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    // background-color: $background-color;
+    // color: $font-color
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+  
+.container .form-inputs > * {
+    width: 100%;
+}
